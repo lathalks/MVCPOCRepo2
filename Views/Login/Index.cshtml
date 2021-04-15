@@ -1,0 +1,30 @@
+﻿@model MVCPOC.Models.Applicant 
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_Layout";
+}
+
+<h4 class="text-center">Login</h4>
+<div class="h-100 d-flex justify-content-center align-items-center">
+
+    @using (Html.BeginForm("Authorise", "Login"))
+    {
+        <div class="form-group">
+            <label asp-for="TypeId" class="control-label">Login as</label>
+            <select asp-for="TypeId"  class="form-control" asp-items="ViewBag.TypeId"></select>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(a => a.Username)
+                @Html.TextBoxFor(a => a.Username, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+            </div><br />
+            <div class="form-group">
+                @Html.LabelFor(a => a.Password)
+                @Html.TextBoxFor(a => a.Password, new { @class = "form-control", type = "Password" })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div><br />
+            <input type="submit" value="Login" class="btn btn-primary" />
+            }
+
+            <p>@TempData["errorMessage"]</p>
+        </div>

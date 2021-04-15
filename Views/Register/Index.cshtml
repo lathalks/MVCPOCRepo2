@@ -1,0 +1,90 @@
+﻿@model MVCPOC.Models.Applicant
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_Layout1";
+}
+
+<h4 class="text-center">Create a New Account</h4>
+<p class="text-center" >Already Registered?  <a asp-area="" asp-controller="Login" asp-action="Index">Sign In Here</a></p>
+
+<hr />
+<div class="container py-md-4">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <form asp-action="Register" method="post">
+                
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group form-row">
+                    <div class="col-sm-6">
+                        <label asp-for="TypeId" class="control-label">Your signing up as</label>
+                        <select asp-for="TypeId" disabled="disabled" class="form-control" asp-items="ViewBag.TypeId"></select>
+                       </div>
+                </div>
+                        <div class="form-group form-row">
+                            <div class="col-sm-6">
+                                <label asp-for="FirstName" class="control-label"></label>
+                                <input asp-for="FirstName" class="form-control" />
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                            <div class="col-sm-6">
+                                <label asp-for="LastName" class="control-label"></label>
+                                <input asp-for="LastName" class="form-control" />
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group form-row">
+                            <div class="col-sm-6">
+                                <label asp-for="CompanyRegNo" class="control-label"></label>
+                                <input asp-for="CompanyRegNo" class="form-control" />
+                                <span asp-validation-for="CompanyRegNo" class="text-danger"></span>
+
+
+                            </div>
+                            <div class="col-sm-6">
+                                <label asp-for="BusinessEmail" class="control-label"></label>
+                                <input asp-for="BusinessEmail" class="form-control" />
+                                <span asp-validation-for="BusinessEmail" class="text-danger"></span>
+
+                            </div>
+                        </div>
+                        <div class="form-group form-row">
+                            <div class="col-sm-6">
+                                <label asp-for="Mobile" class="control-label"></label>
+                                <input asp-for="Mobile" class="form-control" />
+                                <span asp-validation-for="Mobile" class="text-danger"></span>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <label asp-for="CompanyName" class="control-label"></label>
+                                <input asp-for="CompanyName" class="form-control" />
+                                <span asp-validation-for="CompanyName" class="text-danger"></span>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group form-check">
+                            <input class="form-check-input" asp-for="IsTermChecked" /><label class="form-check-label">
+                                 &nbsp;  By clicking here you agree to our</label> <a class="btn-link" asp-area="" asp-controller="Login" asp-action="Index">Terms of Service</a>
+                                <span asp-validation-for="IsTermChecked" class="text-danger"></span>
+                           
+                        </div>
+                        <div class="form-group ">
+                            <input type="submit" value="Register" class="btn btn-primary" />
+                        </div>
+
+            </form>
+           </div>
+        </div>
+    </div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
