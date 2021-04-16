@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nVYBQEyjjdmCrGOxQ85D4ivnatWkBCRmyEr/Li73eHwlNKGv6OcRTSa/jyCjZ8Auz+lyc499GF6mJubt0hhBFA==",
+  "dgSpecHash": "48AE6euXHDjoIbpv4sIAcXmaE9kRtTqh1PzQtALmYrwfDysNnIeEvFjINeKqqn9QRwdkxlXoVZo+Gn6J39tv1Q==",
   "success": true,
-  "projectFilePath": "D:\\L\\MVCSamples\\MVCPOC\\MVCPOC.csproj",
+  "projectFilePath": "D:\\L\\MVCPOCRepo\\MVCPOC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\09\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\09\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
